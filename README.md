@@ -17,8 +17,11 @@ chmod +x build.sh      #获得权限
 程序输出的是.ppm格式的图片
 因为markdown不能展示.ppm,所以效果图都转成了.png格式
 
-# 0.1
+# 0.1 Get A Image
 ![0.1 effect](images/0.1.png)
+
+# 0.2 Ray Into Scene
+![0.2 effect](images/0.2.png)
 
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
