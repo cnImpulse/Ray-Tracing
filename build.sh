@@ -3,5 +3,5 @@
 OPTS="-std=c++11"
 SRCE="*.cpp"
 
-clang++ -o out.o $OPTS $SRCE
-./out.o > image.ppm
+clang++ -o out $OPTS $SRCE
+./out > image.ppm
