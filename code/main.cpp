@@ -1,6 +1,6 @@
-#include "vec3.h"
-#include "color.h"
-#include "image.h"
+#include "core/vec3.h"
+#include "core/color.h"
+#include "core/image.h"
 #include <iostream>
 
 using std::cout;
