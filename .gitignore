@@ -1,5 +1,6 @@
 out
 .vscode/*
+*.ppm
 
 #Prerequisites
 *.d

@@ -1,6 +1,8 @@
-#include <iostream>
 #include "vec3.h"
+#include "color.h"
 #include "image.h"
+#include <iostream>
+
 using std::cout;
 
 int main(){
@@ -10,7 +12,5 @@ int main(){
 
     image.creat_image();
 
-    vec3 a(3, 2, 1), b(1,2,3);
-    cout << a.normalize() << '\n' << b.normalize() << '\n';
     return 0;
 }

@@ -1,6 +1,10 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
+#include "color.h"
+#include <iostream>
+using std::cout;
+
 class image {
     private:
         int width;
