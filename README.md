@@ -25,3 +25,4 @@ chmod +x build.sh      #获得权限
 
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
+2. [Software Renderer](https://github.com/zauonlok/renderer)
