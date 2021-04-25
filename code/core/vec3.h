@@ -42,6 +42,7 @@ inline vec3 operator*(double k, const vec3& v){
 inline ostream& operator<<(ostream &out, const vec3 &v);
 inline double dot(const vec3 &u, const vec3 &v);
 inline vec3 cross(const vec3 &u, const vec3 &v);
+vec3 lerp(const vec3 &start, const vec3 &end, double t);
 
 using point3 = vec3;
 using color = vec3;

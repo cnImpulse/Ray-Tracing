@@ -2,8 +2,8 @@
 
 color ray_color(const ray& r) {
     vec3 dir = r.direction();
-    auto t = 0.5 * (dir.y + 1.0);
-    return (1.0-t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.5, 1.0);
+    double t = 0.5 * (dir.y + 1.0);
+    return lerp(color(1.0, 1.0, 1.0), color(0.5, 0.5, 1.0), t);
 }
 
 void image::creat_image(const double aspect_ratio) {

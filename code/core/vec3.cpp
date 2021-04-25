@@ -13,3 +13,7 @@ inline vec3 cross(const vec3 &u, const vec3 &v) {
                 u.z * v.x - u.x * v.z,
                 u.x * v.y - u.y * v.x);
 }
+
+vec3 lerp(const vec3 &start, const vec3 &end, double t) {
+    return start + t * (end - start);
+}
