@@ -1,6 +1,7 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
+#include "ray.h"
 #include "color.h"
 #include <iostream>
 using std::cout;
@@ -15,7 +16,7 @@ class image {
         int get_width() { return width; }
         int get_height() { return height; }
 
-        void creat_image();
+        void creat_image(const double aspect_ratio);
 };
 
 #endif

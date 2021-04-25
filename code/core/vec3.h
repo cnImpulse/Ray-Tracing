@@ -25,7 +25,14 @@ class vec3
         vec3 operator*(double k) const { return vec3(k * x, k * y, k * z); }
         vec3 operator/(double k) const { return *this * (1 / k); }
 
-        vec3 normalize() { return *this / length(); }
+        vec3 normalize() const { return *this / length(); }
+
+        static vec3 up()    { return vec3(0, 1, 0); }
+        static vec3 down()  { return vec3(0, -1, 0); }
+        static vec3 right() { return vec3(1, 0, 0); }
+        static vec3 left()  { return vec3(-1, 0, 0); }
+        static vec3 front() { return vec3(0, 0, 1); }
+        static vec3 back()  { return vec3(0, 0, -1); }
 };
 
 inline vec3 operator*(double k, const vec3& v){
