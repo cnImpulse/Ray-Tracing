@@ -2,10 +2,11 @@
 简单的光线追踪器
 
 # 运行项目
-mac/linux 环境下,控制台下运行 build.sh
+mac/linux 环境下,控制台运行 build.sh  
+
 windows 环境下,通过git的命令行工具运行 build.sh
 
-mac 环境运行项目示例
+# mac 环境运行项目示例
 ```shell
 cd desktop/ray-tracing #进入项目文件
 chmod +x build.sh      #获得权限
