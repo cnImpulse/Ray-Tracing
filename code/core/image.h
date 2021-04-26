@@ -3,6 +3,7 @@
 
 #include "ray.h"
 #include "color.h"
+#include "sphere.h"
 #include <iostream>
 using std::cout;
 
@@ -18,5 +19,7 @@ class image {
 
         void creat_image(const double aspect_ratio);
 };
+
+color ray_color(const sphere& sphere, const ray& r);
 
 #endif

@@ -1,9 +1,10 @@
 #include "image.h"
 
-color ray_color(const ray& r) {
+color ray_color(const sphere& sphere, const ray& r) {
+    if(sphere.intersect(r)) return get_red();
     vec3 dir = r.direction();
     double t = 0.5 * (dir.y + 1.0);
-    return lerp(color(1.0, 1.0, 1.0), color(0.5, 0.5, 1.0), t);
+    return lerp(get_white(), color(0.5, 0.5, 1.0), t);
 }
 
 void image::creat_image(const double aspect_ratio) {
@@ -17,13 +18,16 @@ void image::creat_image(const double aspect_ratio) {
     auto vertical = vec3(0, viewport_height, 0);
     auto lower_left_corner = origin - horizontal/2 - vertical/2 - vec3(0, 0, focal_length);
 
+    // set objects
+    sphere sphere(point3(0, 0, -1), 0.5);
+
     // cout color
     for(int j=height-1; j>=0; --j) {
         for(int i=0; i<width; ++i){
             double u = double(i) / (width-1);
             double v = double(j) / (height-1);
             ray r(origin, lower_left_corner + u*horizontal + v*vertical - origin);
-            color pixel_color = ray_color(r);
+            color pixel_color = ray_color(sphere, r);
             write_color(cout, pixel_color);
         }
     }

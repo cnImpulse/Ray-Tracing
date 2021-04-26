@@ -35,14 +35,27 @@ class vec3
         static vec3 back()  { return vec3(0, 0, -1); }
 };
 
+inline ostream& operator<<(ostream &out, const vec3 &v) {
+    return out << v.x << ' ' << v.y << ' ' << v.z;
+}
+
 inline vec3 operator*(double k, const vec3& v){
     return v * k;
 }
 
-inline ostream& operator<<(ostream &out, const vec3 &v);
-inline double dot(const vec3 &u, const vec3 &v);
-inline vec3 cross(const vec3 &u, const vec3 &v);
-vec3 lerp(const vec3 &start, const vec3 &end, double t);
+inline double dot(const vec3 &u, const vec3 &v) {
+     return u.x * v.x + u.y * v.y + u.z * v.z; 
+}
+
+inline vec3 cross(const vec3 &u, const vec3 &v) {
+    return vec3(u.y * v.z - u.z * v.y,
+                u.z * v.x - u.x * v.z,
+                u.x * v.y - u.y * v.x);
+}
+
+inline vec3 lerp(const vec3 &start, const vec3 &end, double t) {
+    return start + t * (end - start);
+}
 
 using point3 = vec3;
 using color = vec3;
