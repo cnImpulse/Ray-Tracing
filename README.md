@@ -1,5 +1,5 @@
 # Ray-Tracing
-简单的光线追踪器
+[简单的光线追踪器](https://github.com/impulses-1/Ray-Tracing)
 
 # 运行项目
 mac/linux 环境下,控制台运行 build.sh  
@@ -31,4 +31,5 @@ chmod +x build.sh      #获得权限
 
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
-2. [Software Renderer](https://github.com/zauonlok/renderer)
+2. [Games 101-现代计算机图形学入门-闫令琪](https://www.bilibili.com/video/BV1X7411F744?p=1)
+3. [Software Renderer](https://github.com/zauonlok/renderer)
