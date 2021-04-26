@@ -28,6 +28,7 @@ class vec3
         vec3 normalize() const { return *this / length(); }
 
         static vec3 zero()  { return vec3(0, 0, 0); }
+        static vec3 one()   { return vec3(1, 1, 1); }
         static vec3 up()    { return vec3(0, 1, 0); }
         static vec3 down()  { return vec3(0, -1, 0); }
         static vec3 right() { return vec3(1, 0, 0); }

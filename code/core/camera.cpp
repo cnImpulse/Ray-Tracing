@@ -2,9 +2,13 @@
 #include "cmath"
 
 color ray_color(const sphere& sphere, const ray& r) {
-    if(sphere.intersect(r)) return get_red();
+    double t = sphere.intersect(r);
+    if(t > 0) {
+        vec3 normal = (r.at(t) - sphere.position).normalize();
+        return 0.5 * (normal + vec3::one());
+    }
     vec3 dir = r.direction();
-    double t = 0.5 * (dir.y + 1.0);
+    t = 0.5 * (dir.y + 1.0);
     return lerp(get_white(), get_blue(), t);
 }
 
