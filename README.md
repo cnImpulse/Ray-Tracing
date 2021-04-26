@@ -23,6 +23,9 @@ chmod +x build.sh      #获得权限
 # 0.2 Ray Into Scene
 ![0.2 effect](images/0.2.png)
 
+# 0.3 Add A Sphere
+![0.3 effect](images/0.3.png)
+
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 2. [Software Renderer](https://github.com/zauonlok/renderer)
