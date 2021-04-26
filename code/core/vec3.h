@@ -6,8 +6,7 @@
 using std::sqrt;
 using std::ostream;
 
-class vec3
-{
+class vec3 {
     public:
         double x = 0;
         double y = 0;

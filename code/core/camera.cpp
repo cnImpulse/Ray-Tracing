@@ -1,14 +1,13 @@
 #include "camera.h"
-#include "cmath"
+#include "hittable.h"
+#include <cmath>
 
 color ray_color(const sphere& sphere, const ray& r) {
-    double t = sphere.intersect(r);
-    if(t > 0) {
-        vec3 normal = (r.at(t) - sphere.position).normalize();
-        return 0.5 * (normal + vec3::one());
-    }
+    hit_record out_record;
+    if(sphere.hit(r, 0, 10000, out_record)) return 0.5 * (out_record.normal + vec3::one());
+
     vec3 dir = r.direction();
-    t = 0.5 * (dir.y + 1.0);
+    double t = 0.5 * (dir.y + 1.0);
     return lerp(get_white(), get_blue(), t);
 }
 

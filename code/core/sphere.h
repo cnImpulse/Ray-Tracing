@@ -1,26 +1,17 @@
 #ifndef SPHERE_H
 #define SPHERE_H
 
-#include "ray.h"
-#include "vec3.h"
+#include "hittable.h"
 
-class sphere
-{
+class sphere : public hittable {
     public:
-        point3 position = {0, 0, 0};
+        point3 position = point3::zero();
         double radius = 1;
 
-        sphere(const point3& position, double radius): position(position), radius(radius) {}
+        sphere() {}
+        sphere(const point3 &position, double radius): position(position), radius(radius) {}
 
-        double intersect(const ray& r) const {
-                vec3 oc = r.origin() - position;
-                auto a = r.direction.length_squared();
-                auto half_b = dot(oc, r.direction());
-                auto c = c.length_squared() - radius*radius;
-                auto discriminant = half_b * half_b - a * c;
-                if(discriminant < 0) return -1.0;
-                return (-half_b - sqrt(discriminant) ) / a;
-        }
+        virtual bool hit(const ray &r, double t_min, double t_max, hit_record &out_record) const override;
 };
 
 #endif

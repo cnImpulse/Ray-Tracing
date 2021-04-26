@@ -7,8 +7,7 @@
 #include "sphere.h"
 using std::cout;
 
-class camera
-{
+class camera {
     private:
         point3 position = vec3::zero();
         double aspect_ratio = 1;
