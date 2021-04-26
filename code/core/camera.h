@@ -4,7 +4,7 @@
 #include "vec3.h"
 #include "ray.h"
 #include "color.h"
-#include "sphere.h"
+#include "hittable.h"
 using std::cout;
 
 class camera {

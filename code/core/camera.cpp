@@ -1,5 +1,4 @@
 #include "camera.h"
-#include "hittable.h"
 #include <cmath>
 
 color ray_color(const sphere& sphere, const ray& r) {

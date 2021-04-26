@@ -1,4 +1,4 @@
-#include "core/sphere.h"
+#include "core/hittable.h"
 #include "core/camera.h"
 #include <iostream>
 
