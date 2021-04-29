@@ -7,6 +7,8 @@
 #include <iostream>
 using std::shared_ptr;
 using std::make_shared;
+using std::ostream;
+using std::cout;
 using std::sqrt;
 
 const double PI = 3.1415926535897932385;
@@ -21,8 +23,5 @@ inline double clamp(double x, double min, double max) {
     if(x > max) return max;
     return x;
 }
-
-#include "vec3.h"
-#include "ray.h"
 
 #endif

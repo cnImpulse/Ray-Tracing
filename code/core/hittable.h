@@ -2,6 +2,8 @@
 #define HITTABLE_H
 
 #include "raytracing.h"
+#include "vec3.h"
+#include "ray.h"
 #include <vector>
 using std::vector;
 

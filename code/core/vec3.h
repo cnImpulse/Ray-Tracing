@@ -1,10 +1,7 @@
 #ifndef VEC3_H
 #define VEC3_H
 
-#include <cmath>
-#include <iostream>
-using std::sqrt;
-using std::ostream;
+#include "raytracing.h"
 
 class vec3 {
     public:
@@ -43,6 +40,11 @@ class vec3 {
         static vec3 left()  { return vec3(-1, 0, 0); }
         static vec3 front() { return vec3(0, 0, 1); }
         static vec3 back()  { return vec3(0, 0, -1); }
+
+        static vec3 random() { return vec3(random_double(), random_double(), random_double()); }
+        static vec3 random(double min, double max) {
+            return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
+        }
 };
 
 inline ostream& operator<<(std::ostream &out, const vec3 &v) {
@@ -66,6 +68,8 @@ inline vec3 cross(const vec3 &u, const vec3 &v) {
 inline vec3 lerp(const vec3 &start, const vec3 &end, double t) {
     return start + t * (end - start);
 }
+
+vec3 random_in_unit_sphere();
 
 using point3 = vec3;
 using color = vec3;
