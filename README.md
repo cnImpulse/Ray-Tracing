@@ -6,7 +6,7 @@ mac/linux 环境下,控制台运行 build.sh
 
 windows 环境下,通过git的命令行工具运行 build.sh
 
-# mac 环境运行项目示例
+## mac 环境运行项目示例
 ```shell
 cd desktop/ray-tracing #进入项目文件
 chmod +x build.sh      #获得权限
@@ -17,19 +17,19 @@ chmod +x build.sh      #获得权限
 程序输出的是.ppm格式的图片
 因为markdown不能展示.ppm,所以效果图都转成了.png格式
 
-# 0.1 Get A Image
+## 0.1 Get A Image
 ![0.1 effect](images/0.1.png)
 
-# 0.2 Ray Into Scene
+## 0.2 Ray Into Scene
 ![0.2 effect](images/0.2.png)
 
-# 0.3 Add A Sphere
+## 0.3 Add A Sphere
 ![0.3 effect](images/0.3.png)
 
-# 0.4 Shading With Surface Normals
+## 0.4 Shading With Surface Normals
 ![0.4 effect](images/0.4.png)
 
-# 0.5 Render Multiple Objects
+## 0.5 Render Multiple Objects
 ![0.5 effect](images/0.5.png)
 
 # 参考
