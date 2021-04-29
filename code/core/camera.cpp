@@ -13,17 +13,22 @@ void camera::output_ppm_image(const hittable &scene , int scene_height) const {
     int width = scene_height * aspect_ratio, height = scene_height;
     double x = -width / 2.0, y = -height / 2.0, z = -x / tan(fovY / 2.0);
     point3 screen_origin(x, y, z);
+    int  sample_frequency = 100;
 
     // output .ppm head
     cout << "P3\n" << width << ' ' << height << "\n255\n";
 
     // output pixels color
-    for(int j=height-1; j>=0; --j) {
-        for(int i=0; i<width; ++i) {
-            point3 offset(i, j, 0);
-            point3 pixel = screen_origin + offset;
-            ray r(position, pixel - position);
-            write_color(cout, ray_color(scene, r));
+    for(int j = height-1; j >= 0; --j) {
+        for(int i = 0; i < width; ++i) {
+            color pixel_color(0, 0, 0);
+            for(int k = 0; k < sample_frequency; ++k) {
+                point3 offset(i + random_double(), j + random_double(), 0);
+                point3 pixel = screen_origin + offset;
+                ray r(position, pixel - position);
+                pixel_color += ray_color(scene, r);
+            }
+            write_color(cout, pixel_color / sample_frequency);
         }
     }
 }

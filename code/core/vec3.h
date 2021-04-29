@@ -24,6 +24,15 @@ class vec3 {
         vec3 operator*(double k) const { return vec3(k * x, k * y, k * z); }
         vec3 operator/(double k) const { return *this * (1 / k); }
 
+        vec3& operator+=(const vec3 &v) {
+            x+=v.x, y+=v.y, z+=v.z;
+            return *this;
+        }
+        vec3& operator-=(const vec3 &v) {
+            x-=v.x, y-=v.y, z-=v.z;
+            return *this;
+        }
+
         vec3 normalize() const { return *this / length(); }
 
         static vec3 zero()  { return vec3(0, 0, 0); }
