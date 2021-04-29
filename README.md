@@ -29,6 +29,9 @@ chmod +x build.sh      #获得权限
 # 0.4 Shading With Surface Normals
 ![0.4 effect](images/0.4.png)
 
+# 0.5 Render Multiple Objects
+![0.5 effect](images/0.5.png)
+
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 2. [Games 101-现代计算机图形学入门-闫令琪](https://www.bilibili.com/video/BV1X7411F744?p=1)
