@@ -16,6 +16,7 @@ class camera {
         camera(double aspect_ratio): aspect_ratio(aspect_ratio) {}
 
         void output_ppm_image(const hittable &scene , int scene_height) const;
+        void sampling(const hittable &scene, const point3 &pixel, int rand_sampling_frequency) const;
 };
 
 #endif

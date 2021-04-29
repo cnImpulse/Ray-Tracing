@@ -33,8 +33,8 @@ chmod +x build.sh      #获得权限
 ![0.5 effect](images/0.5.png)
 
 ## 0.6 Antialiasing
->宽: 711, 高: 400
->每像素随机在周围采样100次, 时间花费: 6.8s
+>宽: 711, 高: 400 
+>每像素随机在周围采样100次, 时间花费: 7.8s
 
 ![0.6 effect](images/0.6.png)
 
