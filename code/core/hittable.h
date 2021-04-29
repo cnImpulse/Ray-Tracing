@@ -1,11 +1,8 @@
 #ifndef HITTABLE_H
 #define HITTABLE_H
 
-#include "ray.h"
-#include <memory>
+#include "raytracing.h"
 #include <vector>
-using std::shared_ptr;
-using std::make_shared;
 using std::vector;
 
 struct hit_record {
@@ -26,17 +23,6 @@ class hittable {
         virtual bool hit(const ray &r, double t_min, double t_max, hit_record &out_record) const = 0;
 };
 
-class sphere : public hittable {
-    public:
-        point3 position = point3::zero();
-        double radius = 1;
-
-        sphere() {}
-        sphere(const point3 &position, double radius): position(position), radius(radius) {}
-
-        virtual bool hit(const ray &r, double t_min, double t_max, hit_record &out_record) const override;
-};
-
 class hittable_list : public hittable {
     public:
         vector<shared_ptr<hittable>> objects;
@@ -46,6 +32,17 @@ class hittable_list : public hittable {
 
         void clear(){ objects.clear(); }
         void add(shared_ptr<hittable> object) { objects.push_back(object); }
+
+        virtual bool hit(const ray &r, double t_min, double t_max, hit_record &out_record) const override;
+};
+
+class sphere : public hittable {
+    public:
+        point3 position = point3::zero();
+        double radius = 1;
+
+        sphere() {}
+        sphere(const point3 &position, double radius): position(position), radius(radius) {}
 
         virtual bool hit(const ray &r, double t_min, double t_max, hit_record &out_record) const override;
 };

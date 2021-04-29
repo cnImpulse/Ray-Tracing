@@ -1,8 +1,7 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "vec3.h"
-#include "ray.h"
+#include "raytracing.h"
 #include "color.h"
 #include "hittable.h"
 using std::cout;
@@ -16,7 +15,7 @@ class camera {
         camera() {}
         camera(double aspect_ratio): aspect_ratio(aspect_ratio) {}
 
-        void output_ppm_image(const sphere &sphere, int scene_height) const;
+        void output_ppm_image(const hittable &scene , int scene_height) const;
 };
 
 #endif

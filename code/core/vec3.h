@@ -36,7 +36,7 @@ class vec3 {
         static vec3 back()  { return vec3(0, 0, -1); }
 };
 
-inline ostream& operator<<(ostream &out, const vec3 &v) {
+inline ostream& operator<<(std::ostream &out, const vec3 &v) {
     return out << v.x << ' ' << v.y << ' ' << v.z;
 }
 
