@@ -32,6 +32,12 @@ chmod +x build.sh      #获得权限
 ## 0.5 Render Multiple Objects
 ![0.5 effect](images/0.5.png)
 
+## 0.6 Antialiasing
+>宽: 711, 高: 400
+>每像素随机在周围采样100次, 时间花费: 6.8s
+
+![0.6 effect](images/0.6.png)
+
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 2. [Games 101-现代计算机图形学入门-闫令琪](https://www.bilibili.com/video/BV1X7411F744?p=1)
