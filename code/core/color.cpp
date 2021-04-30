@@ -1,6 +1,6 @@
 #include "color.h"
 
-void write_color(std::ostream &out, const color pixel_color) {
+void write_color(std::ostream &out, color pixel_color) {
     // gamma correction
     auto r = sqrt(pixel_color.x);
     auto g = sqrt(pixel_color.y);
