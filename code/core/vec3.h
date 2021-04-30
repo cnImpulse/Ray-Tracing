@@ -70,6 +70,7 @@ inline vec3 lerp(const vec3 &start, const vec3 &end, double t) {
 }
 
 vec3 random_in_unit_sphere();
+vec3 random_in_unit_sphere_surface();
 
 using point3 = vec3;
 using color = vec3;

@@ -5,7 +5,7 @@ color ray_color(const hittable &scene, const ray& r, int depth = 20) {
     hit_record out_record;
     // random reflect until scene.hit() is false
     if(scene.hit(r, 0.001, INFINITY, out_record)) {
-        point3 target = out_record.point + out_record.normal + random_in_unit_sphere();
+        point3 target = out_record.point + out_record.normal + random_in_unit_sphere_surface();
         return 0.5 * ray_color(scene, ray(out_record.point, target - out_record.point), depth - 1);
     }
 
