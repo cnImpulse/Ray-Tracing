@@ -12,7 +12,7 @@ color ray_color(const hittable &scene, const ray& r, int depth = 20) {
 
     vec3 dir = r.direction();
     double t = 0.5 * (dir.y + 1.0);
-    return lerp(get_white(), get_blue(), t);
+    return lerp(get_white(), color(0.5, 0.7, 1.0), t);
 }
 
 void camera::output_ppm_image(const hittable &scene , int scene_height) const {
