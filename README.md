@@ -38,6 +38,17 @@ chmod +x build.sh      #获得权限
 
 ![0.6 effect](images/0.6.png)
 
+## 0.7 Diffuse Materials
+
+### 0.7.0 Simple Reflection 
+![0.7.0 effect](images/0.7.0.png)
+
+### 0.7.1 True Lambertian Reflection
+![0.7.1 effect](images/0.7.1.png)
+
+### 0.7.2 Hemisphere Reflection
+![0.7.2 effect](images/0.7.2.png)
+
 # 参考
 1. [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 2. [Games 101-现代计算机图形学入门-闫令琪](https://www.bilibili.com/video/BV1X7411F744?p=1)
