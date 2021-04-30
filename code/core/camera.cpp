@@ -2,10 +2,9 @@
 
 color ray_color(const hittable &scene, const ray& r, int depth = 20) {
     if(depth <= 0) return get_white();
-
     hit_record out_record;
     // random reflect until scene.hit() is false
-    if(scene.hit(r, 0, INFINITY, out_record)) {
+    if(scene.hit(r, 0.001, INFINITY, out_record)) {
         point3 target = out_record.point + out_record.normal + random_in_unit_sphere();
         return 0.5 * ray_color(scene, ray(out_record.point, target - out_record.point), depth - 1);
     }
@@ -27,7 +26,7 @@ void camera::output_ppm_image(const hittable &scene , int scene_height) const {
     for(int j = height-1; j >= 0; --j) {
         for(int i = 0; i < width; ++i) {
             point3 pixel = screen_origin + vec3(i, j, 0);
-            sampling(scene, pixel, 10);
+            sampling(scene, pixel, 50);
         }
     }
 }
